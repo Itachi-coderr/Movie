@@ -1,6 +1,5 @@
 let movies = [];
 
-// Function to add a movie
 function addMovie(title, director, year, rating) {
     const movie = {
         title: title,
@@ -13,7 +12,6 @@ function addMovie(title, director, year, rating) {
     alert(`Movie "${title}" added to the collection.`);
 }
 
-// Function to display all movies
 function displayMovies() {
     if (movies.length === 0) {
         alert("No movies in the collection.");
@@ -26,7 +24,6 @@ function displayMovies() {
     }
 }
 
-// Function to delete a movie
 function deleteMovie(title) {
     const initialLength = movies.length;
     movies = movies.filter(movie => movie.title.toLowerCase() !== title.toLowerCase());
@@ -38,7 +35,6 @@ function deleteMovie(title) {
     }
 }
 
-// Interactive loop to manage the movie collection
 function manageMovies() {
     while (true) {
         const action = prompt("Choose an action: add, view, delete").toLowerCase();
@@ -64,5 +60,4 @@ function manageMovies() {
     }
 }
 
-// Start managing movies
 manageMovies();
